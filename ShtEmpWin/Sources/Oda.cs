@@ -18,7 +18,7 @@ namespace ShtEmpWin.Sources
 
         public Oda()
         {
-            t.Interval = 1000;
+            t.Interval = 5000;
             t.Elapsed += T_Elapsed; 
         }
  
