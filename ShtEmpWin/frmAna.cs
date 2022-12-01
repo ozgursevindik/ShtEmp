@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,16 +14,36 @@ namespace ShtEmpWin
 {
     public partial class frmAna : Form
     {
-        Timer t = new Timer(); 
-        
+        System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+        Thread _thread;
         public frmAna()
         {
             InitializeComponent();
-
-
+            CheckForIllegalCrossThreadCalls = false;
             t.Interval = 1000;
             t.Tick += T_Tick;
             t.Start();
+
+
+            
+            _thread = new Thread(new ThreadStart( SaveGame )); 
+            _thread.Start();
+        }
+
+        public void SaveGame()
+        {
+            while (true)
+            {
+                for (int i = 0; i < 2000; i++)
+                {
+                    lblStatus.Text = i.ToString() + " Kb";
+                    lblStatus.Refresh();
+                }
+                
+                lblStatus.Text = "Saved: " + DateTime.Now.ToString();
+                Thread.Sleep(2000);
+            }
+            
         }
 
         private void T_Tick(object sender, EventArgs e)
@@ -86,6 +107,29 @@ namespace ShtEmpWin
         private void panel3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Program.dukkan.odalar[2].Temizle();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("aloha");
+        }
+
+        private void frmAna_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                _thread.Abort();                
+            }
+            catch
+            {
+            }
+            Environment.Exit(Environment.ExitCode);
+
+        }
+
+        private void frmAna_FormClosed(object sender, FormClosedEventArgs e)
+        {
+             
         }
     }
 }

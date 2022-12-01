@@ -30,6 +30,8 @@ namespace ShtEmpWin
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.lblKasa = new System.Windows.Forms.Label();
             this.btnMusteri = new System.Windows.Forms.Button();
             this.lblAnlikInsan = new System.Windows.Forms.Label();
@@ -54,6 +56,8 @@ namespace ShtEmpWin
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlMain.Controls.Add(this.button1);
+            this.pnlMain.Controls.Add(this.lblStatus);
             this.pnlMain.Controls.Add(this.lblKasa);
             this.pnlMain.Controls.Add(this.btnMusteri);
             this.pnlMain.Controls.Add(this.lblAnlikInsan);
@@ -62,8 +66,29 @@ namespace ShtEmpWin
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Location = new System.Drawing.Point(12, 12);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(440, 391);
+            this.pnlMain.Size = new System.Drawing.Size(456, 378);
             this.pnlMain.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(302, 287);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(239, 349);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(44, 15);
+            this.lblStatus.TabIndex = 6;
+            this.lblStatus.Text = "Durum";
             // 
             // lblKasa
             // 
@@ -77,7 +102,7 @@ namespace ShtEmpWin
             // btnMusteri
             // 
             this.btnMusteri.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnMusteri.Location = new System.Drawing.Point(23, 354);
+            this.btnMusteri.Location = new System.Drawing.Point(23, 341);
             this.btnMusteri.Name = "btnMusteri";
             this.btnMusteri.Size = new System.Drawing.Size(75, 23);
             this.btnMusteri.TabIndex = 4;
@@ -186,10 +211,12 @@ namespace ShtEmpWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 415);
+            this.ClientSize = new System.Drawing.Size(480, 402);
             this.Controls.Add(this.pnlMain);
             this.Name = "frmAna";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAna_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAna_FormClosed);
             this.Load += new System.EventHandler(this.frmAna_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
@@ -218,6 +245,8 @@ namespace ShtEmpWin
         private System.Windows.Forms.Label lblOda2AnlikNumune;
         private System.Windows.Forms.Label lblOda1AnlikNumune;
         private System.Windows.Forms.Label lblKasa;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button button1;
     }
 }
 

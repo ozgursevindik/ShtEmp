@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShtEmp", "ShtEmp\ShtEmp.csproj", "{4DEEA298-C666-4ED4-AE87-BA1070CE3115}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShtEmpWin", "ShtEmpWin\ShtEmpWin.csproj", "{87D57C0D-1A97-4306-8F99-A11CE962588A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShtEmpWin", "ShtEmpWin\ShtEmpWin.csproj", "{87D57C0D-1A97-4306-8F99-A11CE962588A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTryCatch", "SampleTryCatch\SampleTryCatch.csproj", "{9107D440-5712-4ACB-89F2-1E8A8081396F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{87D57C0D-1A97-4306-8F99-A11CE962588A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87D57C0D-1A97-4306-8F99-A11CE962588A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87D57C0D-1A97-4306-8F99-A11CE962588A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9107D440-5712-4ACB-89F2-1E8A8081396F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9107D440-5712-4ACB-89F2-1E8A8081396F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9107D440-5712-4ACB-89F2-1E8A8081396F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9107D440-5712-4ACB-89F2-1E8A8081396F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
